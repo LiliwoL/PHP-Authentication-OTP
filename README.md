@@ -27,6 +27,9 @@ Installation de la dépendance via **composer**:
 composer require spomky-labs/otphp:10.0.3
 ```
 
+> Attention, le module **php7.4-mbstring** doit être installé!
+> Si vous ne l'avez pas: `sudo apt install php7.4-mbstring`
+
 # Utilisation de ce dépôt
 
 * Cloner le dépôt
