@@ -2,8 +2,6 @@
 
 ![Image](https://github.com/LiliwoL/PHP-Authentication-OTP/raw/php7/img/img.png)
 
-> ⚠️⚠️⚠️⚠️ ATTENTION **Ceci est valable pour une version Php < 8** ⚠️⚠️⚠️⚠️
-
 # Sommaire
 
 [toc]
@@ -27,8 +25,8 @@ Installation de la dépendance via **composer**:
 composer require spomky-labs/otphp:10.0.3
 ```
 
-> Attention, le module **php7.4-mbstring** doit être installé!
-> Si vous ne l'avez pas: `sudo apt install php7.4-mbstring`
+> Attention, le module **php-mbstring** doit être installé!
+> Si vous ne l'avez pas: `sudo apt install php-mbstring`
 
 # Utilisation de ce dépôt
 
