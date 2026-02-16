@@ -8,7 +8,7 @@ use OTPHP\TOTP;
  * Génération d'un secret
 ***********************/
 $otp = TOTP::create();
-$secret = $otp->getSecret();
+//$secret = $otp->getSecret();
 
 
 // Utilisation d'un secret déjà généré
@@ -20,7 +20,7 @@ $secretOutput = "The OTP secret is: {$secret}\n";
  * Création du TOTP avec des informations précises
  ***********************/
 $otp = TOTP::create(
-    $secret,                   // secret utilisé (généré plus haut)
+    $secret,            // secret utilisé (généré plus haut)
     30,                 // période de validité
     'sha256',           // Algorithme utilisé
     6                   // 6 digits

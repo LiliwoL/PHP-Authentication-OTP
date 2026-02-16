@@ -1,5 +1,5 @@
 {
     "require": {
-        "spomky-labs/otphp": "10.0.3"
+        "spomky-labs/otphp": "^11.4"
     }
 }

@@ -10,7 +10,7 @@ use OTPHP\TOTP;
 $otp = TOTP::create();
 
 // Génération à la volée
-$secret = $otp->getSecret();
+//$secret = $otp->getSecret();
 
 // ou utilisation d'un secret déjà généré par nos soins (pour les tests)
 $secret = "XVEZ4O2QCL2FYNIAJCIUNDJAKTAWL45S6SCXKJJEBGZNFN7BB4XFOKA3LNX4U3ERMSLSK4AUMKRVWU3YTYXMBK3WFDQQHPVT745CGMA";
