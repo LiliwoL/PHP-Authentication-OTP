@@ -13,7 +13,7 @@ $otp = TOTP::create();
 //$secret = $otp->getSecret();
 
 // ou utilisation d'un secret déjà généré par nos soins (pour les tests)
-$secret = "XVEZ4O2QCL2FYNIAJCIUNDJAKTAWL45S6SCXKJJEBGZNFN7BB4XFOKA3LNX4U3ERMSLSK4AUMKRVWU3YTYXMBK3WFDQQHPVT745CGMA";
+$secret = "JR4WGZLFEBDGK3TFNRXW4IBNEBBFIUZAKNEU6ICTJRAU2";
 
 echo "The OTP secret is: {$secret}\n";
 
@@ -23,13 +23,13 @@ echo "The OTP secret is: {$secret}\n";
  * Création du TOTP avec des informations précises
  ***********************/
 $otp = TOTP::create(
-    $secret,                   // secret utilisé (généré plus haut)
+    $secret,            // secret utilisé (généré plus haut)
     30,                 // période de validité
     'sha256',           // Algorithme utilisé
     6                   // 6 digits
 );
 $otp->setLabel('BTS SIO SLAM'); // The label
-$otp->setIssuer('Lycée Fenelon');
+$otp->setIssuer('Lycée Fenelon - BTS SIO SLAM');
 $otp->setParameter('image', 'https://avatars.githubusercontent.com/u/1199051?v=4'); // FreeOTP can display image
 
 $otpOutput = "{$otp->now()}\n";

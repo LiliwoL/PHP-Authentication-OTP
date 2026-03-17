@@ -12,7 +12,7 @@ $otp = TOTP::create();
 
 
 // Utilisation d'un secret déjà généré
-$secret = "XVEZ4O2QCL2FYNIAJCIUNDJAKTAWL45S6SCXKJJEBGZNFN7BB4XFOKA3LNX4U3ERMSLSK4AUMKRVWU3YTYXMBK3WFDQQHPVT745CGMA";
+$secret = "JR4WGZLFEBDGK3TFNRXW4IBNEBBFIUZAKNEU6ICTJRAU2";
 $secretOutput = "The OTP secret is: {$secret}\n";
 
 
@@ -26,7 +26,7 @@ $otp = TOTP::create(
     6                   // 6 digits
 );
 $otp->setLabel('BTS SIO SLAM'); // The label
-$otp->setIssuer('Lycée Fenelon');
+$otp->setIssuer('Lycée Fenelon - BTS SIO SLAM');
 $otp->setParameter('image', 'https://avatars.githubusercontent.com/u/1199051?v=4'); // FreeOTP can display image
 
 $otpOutput = "The current OTP is: {$otp->now()}\n";
@@ -77,9 +77,9 @@ $formOutput = '';
 if (!empty($_POST['login']))
 {
     if ( checkLoginPassword($_POST['login'], $_POST['password'] ) && checkOTP( $_POST['otp'] ) )
-        $formOutput = "Login OK !";
+        $formOutput = "👍👍👍 Login OK !";
     else
-        $formOutput = "Echec login";
+        $formOutput = "💀💀💀 Echec login";
 }
 ?>
 
