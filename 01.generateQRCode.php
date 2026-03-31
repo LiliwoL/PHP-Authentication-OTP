@@ -25,12 +25,12 @@ echo "The OTP secret is: {$secret}\n";
 $otp = TOTP::create(
     $secret,            // secret utilisé (généré plus haut)
     30,                 // période de validité
-    'sha256',           // Algorithme utilisé
+    'sha1',           // Algorithme utilisé
     6                   // 6 digits
 );
 $otp->setLabel('BTS SIO SLAM'); // The label
 $otp->setIssuer('Lycée Fenelon - BTS SIO SLAM');
-$otp->setParameter('image', 'https://avatars.githubusercontent.com/u/1199051?v=4'); // FreeOTP can display image
+$otp->withParameter('image', 'https://avatars.githubusercontent.com/u/1199051?v=4'); // FreeOTP can display image
 
 $otpOutput = "{$otp->now()}\n";
 
@@ -64,7 +64,7 @@ $qrCodeOutput = "<img src='{$grCodeUri}'>";
     <body>
         <h1>QR Code</h1>
         <div>
-            <span>Secret: <?= $secretOutput; ?></span>
+            <span>Secret: <?= $secret; ?></span>
         </div>
         <br>
         <div>
